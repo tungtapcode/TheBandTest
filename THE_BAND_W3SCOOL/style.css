@@ -1,0 +1,416 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-family: Arial, Helvetica, sans-serif;
+}
+.row {
+  margin-left: -8px;
+  margin-right: -8px;
+}
+.row::after{
+    content: "";
+    display: block;
+    clear: both;
+}
+.col {
+    float: left;
+    padding-left: 8px;
+    padding-right: 8px;
+}
+.col-full{
+width: 100%;
+}
+.col-third{
+    width: 33.33333%;
+}
+
+.col-half{
+    width: 50%;
+}
+.mt-8 {
+    margin-top: 8px; !important
+}
+.mt-16{
+    margin-top: 16px;
+}
+.clear {
+  clear: both;
+}
+.text-white{
+    color: #fff;!important
+}
+@-webkit-keyframes my {
+    0% { color: #F8CD0A; } 
+    50% { color: #fff;  } 
+    100% { color: #F8CD0A;  } 
+}
+@-moz-keyframes my { 
+    0% { color: #F8CD0A;  } 
+    50% { color: #fff;  }
+    100% { color: #F8CD0A;  } 
+}
+@-o-keyframes my { 
+    0% { color: #F8CD0A; } 
+    50% { color: #fff; } 
+    100% { color: #F8CD0A;  } 
+}
+@keyframes my { 
+    0% { color: #F8CD0A;  } 
+    50% { color: #fff;  }
+    100% { color: #F8CD0A;  } 
+} 
+#main {
+}
+#header {
+  background-color: black;
+  height: 46px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+}
+#nav {
+  display: inline-block;
+}
+#nav > li {
+  display: inline-block;
+}
+#nav li {
+  position: relative;
+}
+#nav li a {
+  color: #fff;
+  text-decoration: none;
+  padding: 0 24px;
+  line-height: 46px;
+  display: block;
+}
+#nav > li > a {
+  color: #fff;
+  text-transform: uppercase;
+}
+
+#nav li:hover .subnav {
+  display: block;
+}
+#nav > li:hover > a,
+#nav .subnav li:hover a {
+  color: #000;
+  background-color: #ccc;
+}
+
+#nav .subnav {
+  position: absolute;
+  list-style-type: none;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  display: none;
+}
+#nav .subnav a {
+  color: #000;
+  padding: 0 12px;
+  background-color: #fff;
+}
+#nav nav-down {
+  font-size: 15px;
+}
+#header .search-btn {
+  float: right;
+}
+#header .search-icon {
+  color: #fff;
+  font-size: 20px;
+  line-height: 46px;
+  padding: 0 21px;
+  cursor: pointer;
+}
+#header .search-icon:hover {
+  background-color: red;
+}
+#slider {
+  min-height: 500px;
+  margin-top: 46px;
+  padding-top: 50%;
+  background: url(./img/son-tung-5-5609-9677.png) top center / cover no-repeat;
+  position: relative;
+}
+#slider .text-content {
+  position: absolute;
+  bottom: 47px;
+  left: 50%;
+  /* left dùng căn giữa khi có position */
+  transform: translateX(-50%);
+  text-align: center;
+  color: cornsilk;
+}
+#silder .text-heading {
+  font-weight: 500;
+}
+#slider .text-dis {
+  text-transform: uppercase;
+  padding: 15px;
+}
+#content {
+}
+#content .content-section {
+  width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 64px;
+}
+#content .section-head {
+  font-size: 15px;
+  font-weight: 1500;
+  letter-spacing: 4px;
+  margin-top: 15px;
+}
+#content .section-sub {
+  margin-top: 25px;
+  margin-bottom: 25px;
+  font-style: italic;
+  opacity: 0.6;
+}
+#content .about-text {
+  text-align: justify;
+  line-height: 1.6;
+}
+#content .section-head,
+.section-sub {
+  text-align: center;
+}
+#content .members-list {
+  margin-top: 48px;
+}
+#content .members-item {
+  float: left;
+  width: 33.33333%;
+  text-align: center;!important
+}
+
+#content .members-name {
+  font-size: 15px;
+  text-align: center;
+}
+#content .members-img {
+  margin-top: 15px;
+  width: 154px;
+  border-radius: 4px;
+}
+.tour-section{
+    background-color: #000;
+}
+.ticket-list{
+    background-color: #fff;
+    margin-top: 40px;
+}
+.ticket-list li{
+    color: #757575;
+    font-size: 15px;
+    padding: 11px 16px;
+    border-bottom: 1px solid #ddd;
+    list-style-type: none;
+}
+.ticket-list .sold-out{
+    background-color: #f44336;
+    color: #fff;
+    padding: 3px 4px;
+
+
+}
+.ticket-list .buy-now{
+    background:#3d3d3d;
+    font-size:24px;
+    font-weight:bold;
+    -webkit-animation: my 700ms infinite;
+    -moz-animation: my 700ms infinite; 
+    -o-animation: my 700ms infinite; 
+    animation: my 700ms infinite;
+}
+/* Places */
+.places-list{
+    margin-top: 32px;
+    margin-bottom: 48px;
+}
+.places-item{
+    width: 33.33333%;
+    text-align: center;
+    color: #ccc;
+}
+.places-img{
+    width: 212px;
+    display: block;
+}
+.places-img:hover{
+    filter: grayscale(100%);
+    -webkit-filter: grayscale(100%);
+    -moz-filter: grayscale(100%);
+    -ms-filter: grayscale(100%);
+    -o-filter: grayscale(100%);
+}
+.places-body{
+    padding: 26px;
+    font-size: 15px;
+}
+.places-head{
+    font-size: 15px;
+    font-weight: 600;
+    color: #757575;
+}
+.places-time{
+    margin-top: 15px;
+    color: #757575;
+}
+.places-des{
+    margin-top: 15px;
+}
+.places-buy-btn{
+    color: #000;
+    background-color:#ddd;
+    text-decoration: none;
+    padding: 11px 16px;
+    display: inline-block;
+    margin-top: 15px;
+}
+.places-buy-btn:hover{
+    color: #fff;
+    background-color: #f44336;
+}
+
+
+/* modal */
+.modal {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.4);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    
+}
+.modal-container {
+    background-color: #fff;
+    width: 900px;
+    max-width: calc(100% -32px);
+    min-height: 200px;
+    position: relative;
+}
+.modal-header {
+    background-color: #009688;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    color: #fff;
+}
+.modal-close-1 {
+    position: absolute;
+    right: 0;
+    top: 0;
+    color: #fff;
+    padding: 12px;
+    cursor: pointer;
+}
+.modal-close-1:hover {
+    color: #f44336;
+    opacity: 1;
+}
+.modal-body {
+    padding: 16px;
+}
+.modal-label {
+    display: block;
+    font-size: 15px;
+    margin-bottom: 12px;
+}
+.modal-input {
+    border: 1px solid #ccc;
+    width: 100%;
+    margin-bottom: 24px;
+    padding: 10px;
+
+}
+.modal-shop-1 {
+    margin-right: 16px;
+}
+.modal-shop-2 {
+
+}
+.modal-mega-1 {
+
+}
+.modal-check-1 {
+
+}
+.modal.open {
+    display: flex;
+}
+#buy-ticket {
+   background-color:  #009688;
+   border: none;
+   width: 100%;
+   font-size: 15px;
+   color: #fff;
+   text-transform: uppercase;
+   padding: 18px;
+   cursor: pointer;
+}
+#buy-ticket:hover {
+    background-color: brown;
+    opacity: 1;
+}
+.modal-help {
+    padding: 16px;
+    text-align: right;
+}
+/* form */
+.contact-content{
+    margin-top: 48px;
+}
+.contact-info {
+    font-size: 18px;
+    line-height: 1.5;
+}
+.contact-info i[class*="fa fa"]{
+    width: 40px;
+    display: inline-block;
+
+}
+.contact-form .form-control  {
+   padding: 10px;
+   border: 1px solid #ccc;
+   width: 100%;
+}
+.button-1{
+    float: right;
+    background-color: #000;
+    color: #ccc;
+    cursor: pointer;
+}
+.button-1:hover{
+    background-color: #009688;
+}
+.map-section #myVideo {
+    width: 100%;
+}
+/* footer */
+#footer {
+    background-color: #000;
+    padding: 65px 16px;
+    text-align: center;
+}
+.socials-list {
+    font-size: 24px;
+}
+#footer .socials-list a{
+    color: #ccc;
+}
+#footer p{
+    color: #ccc;
+}
