@@ -157,9 +157,12 @@ width: 100%;
 }
 #content .content-section {
   width: 800px;
+  max-width: 100%;
+  padding: 64px 0 112px;
   margin-left: auto;
   margin-right: auto;
-  padding: 0 64px;
+  padding-left: 16px;
+  padding-right: 16px;
 }
 #content .section-head {
   font-size: 15px;
@@ -414,3 +417,5 @@ width: 100%;
 #footer p{
     color: #ccc;
 }
+/* RESPONSIVE */
+media
